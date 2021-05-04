@@ -1,5 +1,5 @@
 # Dijana Dinic Art Portfolio
-> **Dijana Dinic Art Portfolio** is a website that shows Dijana art work in the form of online gallery. Additionally, the website has pages for Contact and About.
+> **Dijana Dinic Art Portfolio** is a website that shows Dijana art work in the form of online gallery.
 
 ## Getting started 
 To get a local copy up and running follow these simple example steps.

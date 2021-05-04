@@ -1,0 +1,38 @@
+{
+  "name": "dijana-dinic-art-portfolio",
+  "version": "0.0.1",
+  "description": "Dijana Dinic Art portfolio website",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --inline",
+    "build": "rm -rf build && webpack --progress"
+  },
+  "keywords": [
+    "dijana dinic","portfolio","gallery","art","showcase","work","contact","cv","resume"
+  ],
+  "author": "Marjan Tanevski",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-env": "^2.0.0-beta.2",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "html-replace-webpack-plugin": "^2.5.6",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}

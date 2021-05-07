@@ -18,14 +18,11 @@ This section will describe requirements needed to satisfy the installation or ru
  - `cd ./dijana-dinic-art-portfolio`
  - `npm install`
  
+### Build
+ - Run `npm run build` to build for production
+
 ### Run
- - Run `npm run start`
- 
-### Test
- - Run `npm run test`
- 
-### Deploy
- - TODO
+ - Run `npm run start` to build for development and start
  
 ## Contact
 

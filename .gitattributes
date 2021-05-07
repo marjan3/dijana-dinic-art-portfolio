@@ -1,0 +1,107 @@
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+* text=auto
+
+## SOURCE CODE
+*.css      text
+*.htm      text
+*.html     text
+*.js       text
+*.json     text
+*.jsx      text
+*.less     text
+*.sass     text
+*.scm      text
+*.scss     text
+*.sh       text eol=lf
+*.ts       text
+*.tsx      text
+*.xml      text
+*.xhtml    text
+
+## DOCKER
+*.dockerignore text
+Dockerfile     text
+
+## DOCUMENTATION
+*.markdown   text
+*.md         text
+*.mdwn       text
+*.mdown      text
+*.mkd        text
+*.mkdn       text
+*.mdtxt      text
+*.mdtext     text
+*.txt        text
+AUTHORS      text
+CHANGELOG    text
+CHANGES      text
+CONTRIBUTING text
+COPYING      text
+copyright    text
+*COPYRIGHT*  text
+INSTALL      text
+license      text
+LICENSE      text
+NEWS         text
+readme       text
+*README*     text
+TODO         text
+
+## LINTERS
+.babelrc      text
+.csslintrc    text
+.eslintrc     text
+.htmlhintrc   text
+.jscsrc       text
+.jshintrc     text
+.jshintignore text
+.prettierrc   text
+.stylelintrc  text
+
+## CONFIGS
+*.conf          text
+*.config        text
+.browserslistrc text
+.editorconfig   text
+.gitattributes  text
+.gitconfig      text
+.gitignore      text
+.htaccess       text
+*.npmignore     text
+*.yaml          text
+*.yml           text
+browserslist    text
+
+## GRAPHICS
+*.gif  binary
+*.ico  binary
+*.jp2  binary
+*.jpg  binary
+*.jpeg binary
+*.pdf  binary
+*.png  binary
+*.svg  text
+*.svgz binary
+*.tif  binary
+*.tiff binary
+*.wbmp binary
+*.webp binary
+
+## AUDIO
+*.mid  binary
+*.midi binary
+*.mp3  binary
+*.ogg  binary
+
+## ARCHIVES
+*.zip binary
+
+## FONTS
+*.ttf   binary
+*.eot   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary

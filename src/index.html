@@ -16,30 +16,24 @@
 
   <meta itemprop="name" content="<%= htmlWebpackPlugin.options.title %>">
   <meta itemprop="description" content="<%= htmlWebpackPlugin.options.description %>">
-  <!-- TODO -->
-  <meta itemprop="image" content="http://yourawesomeproject.com/image.jpg">
+  <meta itemprop="image" content="<%= htmlWebpackPlugin.options.imageUrl %>">
 
-  <!-- TODO -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Project">
+  <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>">
 
-  <!-- TODO -->
-  <meta property="og:url" content="http://yourawesomeproject.com">
+  <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Your Next Awesome Project">
-  <meta property="og:image" content="http://yourawesomeproject.com/image.jpg">
-  <meta property="og:description" content="Description Here">
-  <meta property="og:site_name" content="Site Name">
+  <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta property="og:image" content="<%= htmlWebpackPlugin.options.imageUrl %>">
+  <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
+  <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.siteName %>">
 
   <link rel="apple-touch-icon" href="./icons/icon.png">
   <link rel="shortcut icon" href="./icons/favicon.ico">
   <link type="text/plain" rel="author" href="./assets/humans.txt">
   <link rel="stylesheet" href="./css/app.css">
-
-  <!-- TODO -->
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="alternate" hreflang="en" href="http://yourawesomeproject.com/en">
+  <link rel="alternate" hreflang="en" href="<%= htmlWebpackPlugin.options.url %>">
 
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 

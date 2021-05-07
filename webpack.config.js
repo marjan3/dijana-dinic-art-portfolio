@@ -25,6 +25,9 @@ const CONFIG = {
       keywords:
         "dijana dinic,portfolio,gallery,art,showcase,work,contact,cv,resume",
       description: "Dijana Dinic Art portfolio website",
+      url: "https://dijanadinic.netlify.com/",
+      imageUrl: "https://dijanadinic.netlify.com/image.jpg",
+      siteName: "dijanadinic.netlify.com",
       template: "./src/index.html",
       filename: "./index.html",
       minify: {

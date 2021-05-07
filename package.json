@@ -8,7 +8,15 @@
     "build": "rm -rf build && webpack --progress"
   },
   "keywords": [
-    "dijana dinic","portfolio","gallery","art","showcase","work","contact","cv","resume"
+    "dijana dinic",
+    "portfolio",
+    "gallery",
+    "art",
+    "showcase",
+    "work",
+    "contact",
+    "cv",
+    "resume"
   ],
   "author": "Marjan Tanevski",
   "license": "MIT",
@@ -33,6 +41,5 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
-  },
-  "dependencies": {}
+  }
 }

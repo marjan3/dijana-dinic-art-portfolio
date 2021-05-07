@@ -1,12 +1,15 @@
 /* TEAM */
-Your title: Your name.
-Site: email, link to a contact form, etc.
-Twitter: your Twitter username.
-Location: City, Country.
+Developer: Marjan Tanevski
+Contact: marjantanevski@outlook.com
+Twitter: @marjan3
+From: Bitola, N. Macedonia
 
-[...]
+Artist: Dijana Dinic
+Contact: dijana.dinic.diksi93@gmail.com
+From: Zajecar, Serbia
 
-/* THANKS */
-Name: name or url
 
-[...]
+/* SITE */
+Language: English, Swedish
+Doctype: HTML5
+IDE: Visual Studio Code, Photoshop

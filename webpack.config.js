@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -20,11 +19,12 @@ const CONFIG = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      author: 'Dijana Dinic',
-      title: 'Dijana Dinic Art',
+      author: "Dijana Dinic",
+      title: "Dijana Dinic Art",
       // comma separated list
-      keywords: 'dijana dinic,portfolio,gallery,art,showcase,work,contact,cv,resume',
-      description: 'Dijana Dinic Art portfolio website',
+      keywords:
+        "dijana dinic,portfolio,gallery,art,showcase,work,contact,cv,resume",
+      description: "Dijana Dinic Art portfolio website",
       template: "./src/index.html",
       filename: "./index.html",
       minify: {

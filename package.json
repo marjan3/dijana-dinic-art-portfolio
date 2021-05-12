@@ -4,7 +4,7 @@
   "description": "Dijana Dinic Art portfolio website",
   "main": "./src/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --inline",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --inline --watch",
     "build": "rm -rf build && cross-env NODE_ENV=production webpack --progress"
   },
   "keywords": [
@@ -20,6 +20,11 @@
   ],
   "author": "Marjan Tanevski",
   "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.6",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",

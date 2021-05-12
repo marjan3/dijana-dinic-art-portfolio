@@ -43,7 +43,7 @@ const CONFIG = {
         replacement: "",
       },
       {
-        pattern: '<link rel="stylesheet" href="./css/app.css">',
+        pattern: '<link rel="stylesheet" href="./css/cover.css">',
         replacement: "",
       },
     ]),
@@ -58,6 +58,10 @@ const CONFIG = {
       {
         from: "src/assets/icons/",
         to: "icons/",
+      },
+      {
+        from: "src/assets/images/",
+        to: "images/",
       },
       {
         from: "src/assets/*.txt",
@@ -81,13 +85,15 @@ const CONFIG = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   hmr: devMode,
-            // },
+            options: {
+              hmr: devMode,
+            },
           },
           {
             loader: "css-loader",
             options: {
+              // Adds CSS to the DOM by injecting a `<style>` tag
+
               sourceMap: true,
               importLoaders: 2,
             },

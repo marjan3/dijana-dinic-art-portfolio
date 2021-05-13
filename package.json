@@ -1,51 +1,48 @@
 {
-  "name": "dijana-dinic-art-portfolio",
-  "version": "0.0.1",
-  "description": "Dijana Dinic Art portfolio website",
-  "main": "./src/index.js",
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --inline --watch",
-    "build": "rm -rf build && cross-env NODE_ENV=production webpack --progress"
-  },
-  "keywords": [
-    "dijana dinic",
-    "portfolio",
-    "gallery",
-    "art",
-    "showcase",
-    "work",
-    "contact",
-    "cv",
-    "resume"
-  ],
-  "author": "Marjan Tanevski",
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "4.6",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "babel-loader": "^8.1.0",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "babel-preset-env": "^2.0.0-beta.2",
-    "copy-webpack-plugin": "^5.1.1",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.5.3",
-    "cssnano": "^4.1.10",
-    "file-loader": "^6.0.0",
-    "html-replace-webpack-plugin": "^2.5.6",
-    "html-webpack-plugin": "^4.3.0",
-    "imagemin-webpack-plugin": "^2.4.2",
-    "mini-css-extract-plugin": "^0.9.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
-  }
+    "name": "dijana-dinic-art-portfolio",
+    "version": "0.0.1",
+    "description": "Dijana Dinic Art portfolio website",
+    "main": "./src/index.js",
+    "scripts": {
+        "start": "webpack serve --open --inline --stats-children --config webpack.dev.js",
+        "build": "rm -rf build && webpack --progress --config webpack.prod.js"
+    },
+    "keywords": [
+        "dijana dinic",
+        "portfolio",
+        "gallery",
+        "art",
+        "showcase",
+        "work",
+        "contact",
+        "cv",
+        "resume"
+    ],
+    "author": "Marjan Tanevski",
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "4.6",
+        "jquery": "^3.6.0",
+        "popper.js": "^1.16.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/preset-env": "^7.13.10",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.2.4",
+        "css-minimizer-webpack-plugin": "^3.0.0",
+        "cssnano": "^5.0.2",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.3.1",
+        "imagemin-webpack-plugin": "^2.4.2",
+        "mini-css-extract-plugin": "^1.6.0",
+        "postcss-import": "^14.0.2",
+        "postcss-loader": "^5.2.0",
+        "postcss-preset-env": "^6.7.0",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.37.0",
+        "webpack-cli": "^4.7.0",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.7.3"
+    }
 }

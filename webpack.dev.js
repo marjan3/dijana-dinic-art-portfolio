@@ -14,15 +14,4 @@ module.exports = merge(COMMON, {
     watchContentBase: true,
     noInfo: true,
   },
-  module: {
-    rules: [
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: "file-loader",
-        options: {
-          outputPath: "images",
-        },
-      },
-    ],
-  },
 });

@@ -50,13 +50,18 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   test: /\.(jpe?g|png|gif|svg|ico|txt)$/i,
+      //   loader: "file-loader",
+      //   options: {
+      //     outputPath: "images",
+      //     // https://stackoverflow.com/questions/59062150/html-loader-file-loader-not-bundling-the-correct-image-source
+      //     esModule: false,
+      //   },
+      // },
       {
         test: /\.(jpe?g|png|gif|svg|ico|txt)$/i,
-        loader: "file-loader",
-        options: {
-          // https://stackoverflow.com/questions/59062150/html-loader-file-loader-not-bundling-the-correct-image-source
-          esModule: false,
-        },
+        type: "asset/resource",
       },
       {
         test: /\.(css)$/i,

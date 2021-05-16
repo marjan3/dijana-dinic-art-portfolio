@@ -2,6 +2,8 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const helper = require("./webpack.helper");
 
+const webpack = require("webpack");
+
 const options = {
   author: "Dijana Dinic",
   // comma separated list
@@ -18,6 +20,7 @@ module.exports = {
   entry: {
     index: "./src/page-cover/cover.js",
     overview: "./src/page-overview/overview.js",
+    gallery: "./src/page-gallery/gallery.js",
   },
   output: {
     path: path.resolve(__dirname, "./build"),
@@ -43,6 +46,20 @@ module.exports = {
       },
       options
     ),
+    helper.htmlWebpackPlugin(
+      {
+        title: "Gallery",
+        template: "./src/page-gallery/gallery.html",
+        inject: true,
+        chunks: ["gallery"],
+        filename: "./gallery.html",
+      },
+      options
+    ),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
@@ -50,15 +67,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.(jpe?g|png|gif|svg|ico|txt)$/i,
-      //   loader: "file-loader",
-      //   options: {
-      //     outputPath: "images",
-      //     // https://stackoverflow.com/questions/59062150/html-loader-file-loader-not-bundling-the-correct-image-source
-      //     esModule: false,
-      //   },
-      // },
       {
         test: /\.(jpe?g|png|gif|svg|ico|txt)$/i,
         type: "asset/resource",

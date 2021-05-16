@@ -21,6 +21,8 @@ module.exports = {
     index: "./src/page-cover/cover.js",
     overview: "./src/page-overview/overview.js",
     gallery: "./src/page-gallery/gallery.js",
+    contact: "./src/page-contact/contact.js",
+    about: "./src/page-about/about.js",
   },
   output: {
     path: path.resolve(__dirname, "./build"),
@@ -53,6 +55,26 @@ module.exports = {
         inject: true,
         chunks: ["gallery"],
         filename: "./gallery.html",
+      },
+      options
+    ),
+    helper.htmlWebpackPlugin(
+      {
+        title: "Contact",
+        template: "./src/page-contact/contact.html",
+        inject: true,
+        chunks: ["contact"],
+        filename: "./contact.html",
+      },
+      options
+    ),
+    helper.htmlWebpackPlugin(
+      {
+        title: "About",
+        template: "./src/page-about/about.html",
+        inject: true,
+        chunks: ["about"],
+        filename: "./about.html",
       },
       options
     ),

@@ -7,6 +7,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding: 0.1em;
+  border-radius: 0px;
 }
 
 .bd-placeholder-img {
@@ -16,6 +18,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  height: 200px;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {

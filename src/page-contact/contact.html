@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <link rel="apple-touch-icon" href="../assets/icons/icon.png">
+  <link rel="shortcut icon" href="../assets/icons/favicon.ico">
+  <link type="text/plain" rel="author" href="../humans.txt">
+  <link rel="alternate" hreflang="en" href="<%= htmlWebpackPlugin.options.url %>">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+  <%= require('html-loader!../shared/header.html').default %>
+
+    <main role="main">
+      <div class="container centered">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <h5 class="card-title">Send me a message</h5>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputName">Name</label>
+                      <input type="text" class="form-control" id="inputName">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputTextArea">Content</label>
+                    <textarea class="form-control" id="inputTextArea" rows="8"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%= require('html-loader!../shared/footer.html').default %>
+
+</body>
+
+</html>

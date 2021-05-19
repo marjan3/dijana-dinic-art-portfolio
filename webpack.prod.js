@@ -8,7 +8,6 @@ const { merge } = require('webpack-merge');
 module.exports = merge (COMMON, {
     mode: "production",
     output: {
-        publicPath = "./",
         // filename: '[name].[contenthash].bundle.js',
         filename = "js/app.js"
     },

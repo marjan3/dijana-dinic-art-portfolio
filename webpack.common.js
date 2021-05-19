@@ -1,6 +1,8 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const helper = require("./webpack.helper");
+const FaviconsPlugin = require("favicons-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const webpack = require("webpack");
 
@@ -28,10 +30,18 @@ module.exports = {
     path: path.resolve(__dirname, "./build"),
   },
   plugins: [
+    new FaviconsPlugin({
+      logo: "./assets/icons/icon.png",
+      prefix: "icons/",
+      inject: true,
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "public/*.txt", to: "[name][ext]" }],
+    }),
     helper.htmlWebpackPlugin(
       {
         title: "Index",
-        template: "./src/page-cover/cover.html",
+        template: "./src/page-cover/cover.ejs",
         inject: true,
         chunks: ["index"],
         filename: "./index.html",
@@ -41,7 +51,7 @@ module.exports = {
     helper.htmlWebpackPlugin(
       {
         title: "Overview",
-        template: "./src/page-overview/overview.html",
+        template: "./src/page-overview/overview.ejs",
         inject: true,
         chunks: ["overview"],
         filename: "./overview.html",
@@ -51,7 +61,7 @@ module.exports = {
     helper.htmlWebpackPlugin(
       {
         title: "Gallery",
-        template: "./src/page-gallery/gallery.html",
+        template: "./src/page-gallery/gallery.ejs",
         inject: true,
         chunks: ["gallery"],
         filename: "./gallery.html",
@@ -61,7 +71,7 @@ module.exports = {
     helper.htmlWebpackPlugin(
       {
         title: "Contact",
-        template: "./src/page-contact/contact.html",
+        template: "./src/page-contact/contact.ejs",
         inject: true,
         chunks: ["contact"],
         filename: "./contact.html",
@@ -71,7 +81,7 @@ module.exports = {
     helper.htmlWebpackPlugin(
       {
         title: "About",
-        template: "./src/page-about/about.html",
+        template: "./src/page-about/about.ejs",
         inject: true,
         chunks: ["about"],
         filename: "./about.html",
@@ -90,8 +100,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jpe?g|png|gif|svg|ico|txt)$/i,
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(txt)$/i,
+        type: "asset/source",
+        generator: {
+          filename: "[name][ext]",
+        },
       },
       {
         test: /\.(css)$/i,

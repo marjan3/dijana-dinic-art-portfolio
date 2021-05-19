@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 
 const generateMeta = (options) => {
   return {
@@ -63,7 +63,7 @@ const generateMeta = (options) => {
 };
 
 module.exports.htmlWebpackPlugin = (properties, options) => {
-  return new HtmlWebpackPlugin({
+  return new HtmlPlugin({
     ...{
       minify: {
         collapseWhitespace: true,

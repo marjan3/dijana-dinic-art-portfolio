@@ -8,16 +8,16 @@ const { merge } = require("webpack-merge");
 module.exports = merge(COMMON, {
   mode: "production",
   output: {
-    publicPath: "./",
     // filename: '[name].[contenthash].bundle.js',
     filename: "[name].js",
-    chunkFilename: "[id].[chunkhash].js",
+    clean: true,
+    assetModuleFilename: "images/[name][ext][query]",
   },
   module: {
     rules: [
       {
         test: [/\.js$/],
-        exclude: [/node_modules/],
+        exclude: [/node_modules|ejs$/],
         loader: "babel-loader",
         options: { presets: ["@babel/preset-env"] },
       },
@@ -25,8 +25,8 @@ module.exports = merge(COMMON, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].[hash].css",
-      chunkFilename: "[id].[hash].css",
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,

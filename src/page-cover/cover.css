@@ -30,6 +30,7 @@ body {
 
 .cover-background {
   cursor: pointer;
+  background-image: url("../../assets/images/cover.jpg");
 }
 
 /*

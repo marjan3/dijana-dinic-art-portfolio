@@ -20,6 +20,9 @@
     ],
     "author": "Marjan Tanevski",
     "license": "MIT",
+    "engines": {
+        "node": "16.1.0"
+    },
     "dependencies": {
         "bootstrap": "4.6",
         "jquery": "^3.6.0",

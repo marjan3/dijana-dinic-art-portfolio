@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const helper = require("./webpack.helper");
 const FaviconsPlugin = require("favicons-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-
 const webpack = require("webpack");
 
 const options = {

@@ -1,8 +1,8 @@
 const COMMON = require("./webpack.common.js");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { merge } = require("webpack-merge");
 
 module.exports = merge(COMMON, {
@@ -21,19 +21,36 @@ module.exports = merge(COMMON, {
         loader: "babel-loader",
         options: { presets: ["@babel/preset-env"] },
       },
+      {
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        use: [
+          {
+            loader: ImageMinimizerPlugin.loader,
+            options: {
+              severityError: "warning", // Ignore errors on corrupted images
+              minimizerOptions: {
+                plugins: [
+                  ["gifsicle", { interlaced: false }],
+                  [
+                    "mozjpeg",
+                    {
+                      quality: 65,
+                      fastCrush: true,
+                    },
+                  ],
+                  ["pngquant", { quality: "65-90", speed: 4 }],
+                ],
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
-    }),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      optipng: { optimizationLevel: 3 },
-      jpegtran: { progressive: true },
-      gifsicle: { optimizationLevel: 1 },
-      svgo: {},
     }),
   ],
   // https://webpack.js.org/configuration/optimization/

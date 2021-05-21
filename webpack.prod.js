@@ -19,7 +19,6 @@ module.exports = merge(COMMON, {
         test: [/\.js$/],
         exclude: [/node_modules|ejs$/],
         loader: "babel-loader",
-        options: { presets: ["@babel/preset-env"] },
       },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,

@@ -8,8 +8,7 @@ import "./cover.css";
 
 $(function () {
   const body = $(".cover-background")[0];
-  body.addEventListener(
-    "click",
-    () => (window.location.href = "./overview.html")
-  );
+  body.addEventListener("click", () => {
+    window.location.href = "./overview.html";
+  });
 });

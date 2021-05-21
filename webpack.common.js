@@ -26,6 +26,7 @@ module.exports = {
     about: "./src/page-about/about.js",
   },
   output: {
+    publicPath: "",
     path: path.resolve(__dirname, "./build"),
   },
   plugins: [
@@ -98,6 +99,24 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: [/\.js$/],
+        exclude: [/node_modules|ejs$/],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "usage",
+                  corejs: 3,
+                },
+              ],
+            ],
+          },
+        },
+      },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         type: "asset/resource",

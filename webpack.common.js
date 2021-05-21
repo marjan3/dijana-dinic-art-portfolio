@@ -35,7 +35,7 @@ module.exports = {
       inject: true,
     }),
     new CopyPlugin({
-      patterns: [{ from: "public/*.txt", to: "[name][ext]" }],
+      patterns: [{ from: "public/**", to: "[name][ext]" }],
     }),
     helper.htmlWebpackPlugin(
       {

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as $ from "jquery";
 import "lightbox2/dist/css/lightbox.min.css";
 import lightbox from "lightbox2/dist/js/lightbox";
+import "../shared/fonts.css";
 import galleries from "./galleries";
 
 $(function () {

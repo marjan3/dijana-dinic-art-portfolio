@@ -4,6 +4,7 @@
 // import "bootstrap/js/dist/dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as $ from "jquery";
+import "../shared/fonts.css";
 import "./cover.css";
 
 $(function () {

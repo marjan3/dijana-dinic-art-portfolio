@@ -40,7 +40,7 @@ module.exports = {
     }),
     helper.htmlWebpackPlugin(
       {
-        title: "Index",
+        title: "Dijana's ART ®",
         template: "./src/page-cover/cover.ejs",
         inject: true,
         chunks: ["index"],
@@ -50,7 +50,7 @@ module.exports = {
     ),
     helper.htmlWebpackPlugin(
       {
-        title: "Overview",
+        title: "Dijana's ART ® - Overview",
         template: "./src/page-overview/overview.ejs",
         inject: true,
         chunks: ["overview"],
@@ -60,7 +60,7 @@ module.exports = {
     ),
     helper.htmlWebpackPlugin(
       {
-        title: "Gallery",
+        title: "Dijana's ART ® - Gallery",
         template: "./src/page-gallery/gallery.ejs",
         inject: true,
         chunks: ["gallery"],
@@ -70,7 +70,7 @@ module.exports = {
     ),
     helper.htmlWebpackPlugin(
       {
-        title: "Contact",
+        title: "Dijana's ART ® - Contact",
         template: "./src/page-contact/contact.ejs",
         inject: true,
         chunks: ["contact"],
@@ -80,7 +80,7 @@ module.exports = {
     ),
     helper.htmlWebpackPlugin(
       {
-        title: "About",
+        title: "Dijana's ART ® - About me",
         template: "./src/page-about/about.ejs",
         inject: true,
         chunks: ["about"],
